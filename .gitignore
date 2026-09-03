@@ -1,0 +1,38 @@
+# Composer dependencies
+/vendor/
+
+# IntelliJ IDEA project metadata (kept locally)
+/.idea/
+/*.iml
+/out/
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+
+# Tool and test caches
+/.phpunit.cache/
+/.phpunit.result.cache
+/.php-cs-fixer.cache
+/.php_cs.cache
+
+# Assignment runtime state and uploads
+/Assignments/**/var/*
+!/Assignments/**/var/.gitignore
+/Assignments/**/uploads/*
+!/Assignments/**/uploads/.gitignore
+/Assignments/**/*.log
+/Assignments/**/*.sqlite
+/Assignments/**/*.sqlite3
+/Assignments/**/*.db
+
+# Generated TLS material and private keys
+/Assignments/**/*.key
+/Assignments/**/*.pem
+/Assignments/**/*.p12
+/Assignments/**/*.pfx
+/Assignments/**/*.crt
+/Assignments/**/*.csr
+/Assignments/**/*.srl
+

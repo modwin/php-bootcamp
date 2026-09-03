@@ -1,2 +1,11 @@
 {
+  "name": "bjornmw/dvk-wprog2",
+  "description": "Project for WPROG2",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "WPROG2\\": "Assignments/"
+    }
+  },
+  "require": {}
 }
