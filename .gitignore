@@ -16,6 +16,8 @@
 /.phpunit.result.cache
 /.php-cs-fixer.cache
 /.php_cs.cache
+/tests/config.local.php
+/tests/.service-state/
 
 # Assignment runtime state and uploads
 /Assignments/**/var/*
@@ -35,4 +37,3 @@
 /Assignments/**/*.crt
 /Assignments/**/*.csr
 /Assignments/**/*.srl
-
