@@ -56,6 +56,20 @@ composer validate --no-check-publish
 
 HTML and CSS assignments should also be checked with the W3C validators. Record meaningful manual tests and failure cases in the exercise README rather than relying only on a successful browser view.
 
+## Test-driven learning
+
+The repository includes executable specifications for every assignment. Tests for an exercise activate when its `Ex...` directory and `test.config.php` exist; assignments that have not been started are shown as skipped.
+
+```powershell
+composer test:framework
+composer test:assignment -- 1.1
+composer test
+```
+
+The first command verifies the test harness. The second gives a focused red–green loop for one assignment. The third runs all active local, authoritative assignments. Email and MariaDB tests use `composer test:services` and require Docker Desktop. Authentication and HTTPS tests use URLs and certificates from an ignored `tests/config.local.php`.
+
+Tests for assignments whose full definition was not present in the supplied reference are marked provisional and run only with `composer test:provisional` or `--include-provisional`. See [`tests/README.md`](tests/README.md) for configuration, service, and troubleshooting details.
+
 ## Assignment progress
 
 Official Swedish titles are retained so that entries can be matched directly to the course website.
@@ -153,4 +167,3 @@ See [`S9_Capstone`](Assignments/S9_Capstone/README.md).
 | ID | Official title | Type | Status | Work |
 |---|---|---|---|---|
 | 9 | Gesällprov | Mandatory | Not started | — |
-
