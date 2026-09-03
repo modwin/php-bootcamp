@@ -1,0 +1,16 @@
+g<?php
+
+declare(strict_types=1);
+
+return [
+    '8.1' => ['base_url' => 'http://127.0.0.1/protected/'],
+    '8.2' => ['base_url' => 'http://127.0.0.1/digest/', 'username' => 'student', 'password' => 'test-only-password'],
+    '8.3' => ['base_url' => 'https://wprog2.test/', 'ca_cert' => 'C:/path/to/test-ca.crt'],
+    '8.4' => [
+        'base_url' => 'https://wprog2.test/',
+        'ca_cert' => 'C:/path/to/test-ca.crt',
+        'client_cert' => 'C:/path/to/test-client.crt',
+        'client_key' => 'C:/path/to/test-client.key',
+    ],
+    '8.5' => ['base_url' => 'https://wprog2.test/', 'ca_cert' => 'C:/path/to/test-ca.crt'],
+];

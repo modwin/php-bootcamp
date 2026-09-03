@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>WPROG2 Fixture Feed</title>
+    <link>http://fixture.invalid/</link>
+    <description>Deterministic local feed</description>
+    <item>
+      <title>Fixture Article One</title>
+      <link>http://fixture.invalid/article-one</link>
+      <description>First fixture summary</description>
+      <pubDate>Tue, 01 Sep 2026 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Fixture Article Two</title>
+      <link>http://fixture.invalid/article-two</link>
+      <description>Second fixture summary</description>
+      <pubDate>Wed, 02 Sep 2026 12:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
