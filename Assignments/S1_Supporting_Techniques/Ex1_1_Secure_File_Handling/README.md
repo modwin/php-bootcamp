@@ -47,6 +47,14 @@ php -S 127.0.0.1:8000 -t Assignments/S1_Supporting_Techniques/Ex1_1_Secure_File_
 
 Open `http://127.0.0.1:8000/counter.php` and stop the server with `Ctrl+C`.
 
+For the focused red–green learning loop, run:
+
+```powershell
+composer test:assignment -- 1.1
+```
+
+The tests reset only `var/counter.txt`; they never modify the PHP source.
+
 ## Verification
 
 | Date | Environment | Check | Result |
