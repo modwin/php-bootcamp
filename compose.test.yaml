@@ -1,0 +1,56 @@
+name: wprog2-tests
+
+services:
+  mail:
+    image: greenmail/standalone:2.1.13
+    environment:
+      GREENMAIL_OPTS: >-
+        -Dgreenmail.setup.test.smtp
+        -Dgreenmail.setup.test.imap
+        -Dgreenmail.hostname=0.0.0.0
+        -Dgreenmail.users=student:student@test.local
+        -Dgreenmail.users.login=email
+    ports:
+      - "127.0.0.1:${WPROG2_SMTP_PORT:-3025}:3025"
+      - "127.0.0.1:${WPROG2_IMAP_PORT:-3143}:3143"
+      - "127.0.0.1:${WPROG2_MAIL_API_PORT:-8080}:8080"
+    healthcheck:
+      test: ["CMD-SHELL", "timeout 2 bash -c '</dev/tcp/127.0.0.1/3025'"]
+      interval: 2s
+      timeout: 2s
+      retries: 30
+
+  database:
+    image: mariadb:11.8
+    environment:
+      MARIADB_DATABASE: wprog2_test
+      MARIADB_USER: wprog2
+      MARIADB_PASSWORD: wprog2-test-only
+      MARIADB_ROOT_PASSWORD: root-test-only
+    ports:
+      - "127.0.0.1:${WPROG2_DB_PORT:-3307}:3306"
+    tmpfs:
+      - /var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+
+  test-runner:
+    build:
+      context: .
+      dockerfile: tests/docker/Dockerfile
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    environment:
+      WPROG2_SMTP_HOST: mail
+      WPROG2_SMTP_PORT: "3025"
+      WPROG2_IMAP_HOST: mail
+      WPROG2_IMAP_PORT: "3143"
+      WPROG2_MAIL_USER: student@test.local
+      WPROG2_MAIL_PASSWORD: student
+      WPROG2_DB_DSN: mysql:host=database;port=3306;dbname=wprog2_test;charset=utf8mb4
+      WPROG2_DB_USER: wprog2
+      WPROG2_DB_PASSWORD: wprog2-test-only

@@ -7,5 +7,21 @@
       "WPROG2\\": "Assignments/"
     }
   },
-  "require": {}
+  "autoload-dev": {
+    "psr-4": {
+      "WPROG2\\Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^13.3",
+    "guzzlehttp/guzzle": "^7.15",
+    "symfony/process": "^8.1"
+  },
+  "scripts": {
+    "test": "@php vendor/phpunit/phpunit/phpunit --testdox --exclude-group service --exclude-group external --exclude-group provisional",
+    "test:framework": "@php vendor/phpunit/phpunit/phpunit --testdox --testsuite framework",
+    "test:assignment": "@php tests/bin/test-assignment.php",
+    "test:services": "@php tests/bin/test-services.php",
+    "test:provisional": "@php vendor/phpunit/phpunit/phpunit --testdox --group provisional"
+  }
 }
