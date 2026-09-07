@@ -20,5 +20,6 @@ if(flock($file, LOCK_EX)) {
     fwrite($file, $count);
     fflush($file);
 }
+
 fclose($file);
 
