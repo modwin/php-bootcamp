@@ -80,7 +80,7 @@ See [`S1_Supporting_Techniques`](Assignments/S1_Supporting_Techniques/README.md)
 
 | ID | Official title | Type | Status | Work |
 |---|---|---|---|---|
-| 1.1 | Säker filhantering | Mandatory | In progress | [Open](Assignments/S1_Supporting_Techniques/Ex1_1_Secure_File_Handling/README.md) |
+| 1.1 | Säker filhantering | Mandatory | In progress | [Open](Assignments/S1_Supporting_Techniques/Ex1_1/README.md) |
 | 1.2 | Omgivningsvariabler | Mandatory | Not started | — |
 | 1.3 | Grafikgenerering | Optional | Not started | — |
 | 1.4 | Klientstyrd omladdning | Optional | Not started | — |

@@ -17,7 +17,7 @@ final class AssignmentLocatorTest extends TestCase
         $locator = new AssignmentLocator(WPROG2_ROOT);
         $directory = $locator->find('1.1');
         self::assertNotNull($directory);
-        self::assertStringEndsWith('Ex1_1_Secure_File_Handling', str_replace('\\', '/', $directory));
+        self::assertStringEndsWith('Ex1_1', str_replace('\\', '/', $directory));
         $configuration = $locator->load('1.1');
         self::assertNotNull($configuration);
         self::assertSame('/counter.php', $configuration->route('main'));
