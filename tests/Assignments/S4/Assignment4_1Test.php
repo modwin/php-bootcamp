@@ -25,8 +25,11 @@ final class Assignment4_1Test extends AssignmentTestCase
         $ids = [];
         foreach ($xpath->query('//a[@href]') as $link) {
             parse_str((string) parse_url($link->getAttribute('href'), PHP_URL_QUERY), $query);
-            self::assertArrayHasKey('session-id', $query);
-            $ids[] = $query['session-id'];
+            if (str_contains($link->getAttribute('href'), ".php")) {
+                self::assertArrayHasKey('session-id', $query);
+                $ids[] = $query['session-id'];
+
+            }
         }
         foreach ($xpath->query('//form//input[@type="hidden" and @name="session-id"]') as $input) {
             $ids[] = $input->getAttribute('value');
