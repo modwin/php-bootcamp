@@ -9,49 +9,16 @@
     <title>WPROG2</title>
 </head>
 <body>
-<form method="post" action="upload.php">
-    <div>
-        <input type="hidden" name="hidden" value="I am hidden!">
-    </div>
+<form method="post" enctype="multipart/form-data" action="FileHandler.php">
     <p>
-        <label>
-            <input type="text" name="text_box" value="ABC">
-        </label>
+        <input type="file" name="file">
     </p>
     <p>
-        <label>
-            <textarea name="text_area" rows="10" cols="10">DEF</textarea>
-        </label>
-    </p>
-    <p>
-        <label>
-            <input type="checkbox" name="check_box" value="ON" checked="checked">
-        </label>
-    </p>
-    <p>
-        <label>
-            <input type="radio" value="v1" name="radio_button" checked="checked">
-        </label>
-        <label>
-            <input type="radio" value="v2" name="radio_button">
-        </label>
-    </p>
-    <p>
-
-
-        <select name="drop_down_menu" size="1">
-            <option value="Värde1">
-                Värde 1
-            </option>
-            <option value="Värde2">
-                Värde 2
-            </option>
-        </select>
-    </p>
-    <p>
-        <input type="submit" value="Tryck mig" name="push_button">
+        <input type="submit" value="Sänd fil" name="submit">
     </p>
 </form>
+
+
 
 </body>
 </html>

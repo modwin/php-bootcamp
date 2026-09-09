@@ -23,5 +23,8 @@
     "test:assignment": "@php tests/bin/test-assignment.php",
     "test:services": "@php tests/bin/test-services.php",
     "test:provisional": "@php vendor/phpunit/phpunit/phpunit --testdox --group provisional"
+  },
+  "require": {
+    "ext-fileinfo": "*"
   }
 }
