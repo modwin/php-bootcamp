@@ -2,33 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Uppgift 2.1 i kursen WPROG2 på SU.">
+    <meta name="description" content="Uppgift 4.1 i kursen WPROG2 på SU.">
     <meta name="keywords" content="HTML">
     <meta name="author" content="Björn Moderatho Winther">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uppgift 3.2</title>
+    <title>Uppgift 4.1</title>
 </head>
 <body>
-<h1>HTML</h1>
-<table>
-    <tr>
-        <td>
-            Namn
-        </td>
-        <td>
-            Värde
-        </td>
-    </tr>
-    <!--===xxx===-->
-    <tr>
-        <td>
-            ---name---
-        </td>
-        <td>
-            ---value---
-        </td>
-    </tr>
-    <!--===xxx===-->
-</table>
+<h1>Startsida på webbplatsen</h1>
+<p>
+    Slumpmässigt sessions-id (---session-id---) bakas in i interna länkar och formulär. Ladda om sidan för att skapa ett nytt sessions-id.
+</p>
+<p>
+    <a href="main.php?session-id=---session-id---">En intern länk</a>
+</p>
+<p>
+    <a href="main.php?session-id=---session-id---">En intern länk till</a>
+</p>
+<p>
+    <a href="http://su.se/">En extern länk</a>
+</p>
+<p>
+    Ett formulär:
+</p>
+<form method="get" action="main.php">
+    <p>
+        Namn: <input type="text" name="name">
+    </p>
+    <p>
+        <input type="hidden" name="session-id" value="---session-id---">
+        <input type="submit" value="Sänd" name="button">
+    </p>
+</form>
+
 </body>
 </html>
