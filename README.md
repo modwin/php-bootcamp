@@ -1,6 +1,6 @@
-# WPROG2 — Web Development II
+# PHP Bootcamp
 
-This repository contains the practical assignments for the university course WPROG2. The course focuses on server-side web development, primarily with PHP and SQL, while keeping HTML and server-side code in separate files.
+This repository contains the practical assignments in PHP concepts. The assignments focus on server-side web development, primarily with PHP and SQL, while keeping HTML and server-side code in separate files.
 
 ## Learning workflow
 
@@ -67,103 +67,5 @@ composer test
 ```
 
 The first command verifies the test harness. The second gives a focused red–green loop for one assignment. The third runs all active local, authoritative assignments. Email and MariaDB tests use `composer test:services` and require Docker Desktop. Authentication and HTTPS tests use URLs and certificates from an ignored `tests/config.local.php`.
-
-Tests for assignments whose full definition was not present in the supplied reference are marked provisional and run only with `composer test:provisional` or `--include-provisional`. See [`tests/README.md`](tests/README.md) for configuration, service, and troubleshooting details.
-
-## Assignment progress
-
-Official Swedish titles are retained so that entries can be matched directly to the course website.
-
-### 1 Understödjande tekniker
-
-See [`S1_Supporting_Techniques`](Assignments/S1_Supporting_Techniques/README.md).
-
-| ID | Official title | Type | Status | Work |
-|---|---|---|---|---|
-| 1.1 | Säker filhantering | Mandatory | In progress | [Open](Assignments/S1_Supporting_Techniques/Ex1_1/README.md) |
-| 1.2 | Omgivningsvariabler | Mandatory | Not started | — |
-| 1.3 | Grafikgenerering | Optional | Not started | — |
-| 1.4 | Klientstyrd omladdning | Optional | Not started | — |
-
-### 2 Information från användaren
-
-See [`S2_User_Data`](Assignments/S2_User_Data/README.md).
-
-| ID | Official title | Type | Status | Work |
-|---|---|---|---|---|
-| 2.1 | Information sänd via adressfält och länkar | Mandatory | Not started | — |
-| 2.2 | Information sänd via formulär | Mandatory | Not started | — |
-| 2.3 | Uppladdning av fil | Mandatory | Not started | — |
-
-### 3 Kodseparation
-
-See [`S3_Code_Separation`](Assignments/S3_Code_Separation/README.md).
-
-| ID | Official title | Type | Status | Work |
-|---|---|---|---|---|
-| 3.1 | Kodseparation med konstant informationsmängd | Mandatory | Not started | — |
-| 3.2 | Kodseparation med variabel informationsmängd | Mandatory | Not started | — |
-
-### 4 Sessionshantering
-
-See [`S4_Session_Management`](Assignments/S4_Session_Management/README.md).
-
-| ID | Official title | Type | Status | Work |
-|---|---|---|---|---|
-| 4.1 | Information inbakad i HTML | Mandatory | Not started | — |
-| 4.2 | Information hos klienten | Mandatory | Not started | — |
-| 4.3 | Användning av inbyggt stöd | Mandatory | Not started | — |
-
-### 5 Meddelandehantering
-
-See [`S5_Message_Handling`](Assignments/S5_Message_Handling/README.md).
-
-| ID | Official title | Type | Status | Work |
-|---|---|---|---|---|
-| 5.1 | Epost-sändning utan bifogade filer | Mandatory | Not started | — |
-| 5.2 | Epost-sändning med bifogade filer | Mandatory | Not started | — |
-| 5.3 | Epost-mottagning utan bifogade filer | Optional | Not started | — |
-| 5.4 | Epost-mottagning med bifogade filer | Optional | Not started | — |
-
-### 6 Databaser
-
-See [`S6_Databases`](Assignments/S6_Databases/README.md).
-
-| ID | Official title | Type | Status | Work |
-|---|---|---|---|---|
-| 6.1 | Lättviktsdatabaser | Mandatory | Not started | — |
-| 6.2 | Relationsdatabaser och säkerhet | Mandatory | Not started | — |
-| 6.3 | Relationsdatabaser och transaktioner | Mandatory | Not started | — |
-| 6.4 | Relationsdatabaser och effektivitet | Optional | Not started | — |
-
-### 7 Innehållshantering
-
-See [`S7_Content_Management`](Assignments/S7_Content_Management/README.md).
-
-| ID | Official title | Type | Status | Work |
-|---|---|---|---|---|
-| 7.1 | Publiceringssystem | Optional | Not started | — |
-| 7.2 | Syndikering | Optional | Not started | — |
-| 7.3 | Kanaler | Optional | Not started | — |
-| 7.4 | Sökmotor | Optional | Not started | — |
-
-### 8 Säkerhet
-
-See [`S8_Security`](Assignments/S8_Security/README.md).
-
-| ID | Official title | Type | Status | Work |
-|---|---|---|---|---|
-| 8.1 | HTTP-baserad autentisering med okrypterad information | Optional | Not started | — |
-| 8.2 | HTTP-baserad autentisering med krypterad information | Optional | Not started | — |
-| 8.3 | HTTPS-baserad konfidentialitet och serversides-autentisering | Optional | Not started | — |
-| 8.4 | HTTPS-baserad konfidentialitet och klientsides-autentisering | Optional | Not started | — |
-| 8.5 | HTTPS-baserade säkra kakor | Mandatory | Not started | — |
-| 8.6 | HTTPS-baserad betalningshantering | Optional | Not started | — |
-
-### 9 Gesällprov
-
-See [`S9_Capstone`](Assignments/S9_Capstone/README.md).
-
-| ID | Official title | Type | Status | Work |
 |---|---|---|---|---|
 | 9 | Gesällprov | Mandatory | Not started | — |
