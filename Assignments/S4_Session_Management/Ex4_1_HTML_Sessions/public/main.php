@@ -1,6 +1,7 @@
 <?php
 
-namespace WPROG2\S4_Code_Separation\Ex4_1_HTML\public;
+namespace WPROG2\S4_Code_Separation\Ex4_1_HTML_Sessions\public;
+
 require_once __DIR__ . '/../../../../vendor/autoload.php';
 
 use WPROG2\S2_User_Data\Ex2_1_UrlQueryParameters\public\HttpParamPrinter;
