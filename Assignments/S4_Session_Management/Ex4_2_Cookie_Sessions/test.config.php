@@ -7,6 +7,7 @@ return [
     'routes' => [
         'main' => '/main.php',
         'page' => '/cookies.html',
+        'echo' => 'echo.php',
     ],
     'environment' => [],
     'services' => [],
