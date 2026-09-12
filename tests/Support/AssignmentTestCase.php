@@ -7,6 +7,7 @@ namespace WPROG2\Tests\Support;
 use DOMDocument;
 use GuzzleHttp\Client;
 use GuzzleHttp\Cookie\CookieJar;
+use GuzzleHttp\Exception\GuzzleException;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ResponseInterface;
 
@@ -88,6 +89,9 @@ abstract class AssignmentTestCase extends TestCase
         return self::$contexts[static::class]['config'];
     }
 
+    /**
+     * @throws GuzzleException
+     */
     protected function request(string $method, string $routeAlias = 'main', array $options = []): ResponseInterface
     {
         return $this->client->request($method, $this->configuration()->route($routeAlias), $options);
