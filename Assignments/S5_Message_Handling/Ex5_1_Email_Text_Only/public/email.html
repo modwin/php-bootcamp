@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<form action="main.php" method="post">
+    <p>
+        <input name="from" placeholder="Från" type="text">
+    </p>
+    <p>
+        <input name="to" placeholder="Till" type="text">
+    </p>
+    <p>
+        <input name="cc" placeholder="Cc" type="text">
+    </p>
+    <p>
+        <input name="bcc" placeholder="Bcc" type="text">
+    </p>
+    <p>
+        <input name="subject" placeholder="Ärende" type="text">
+    </p>
+    <p>
+        <textarea cols="25" name="message" placeholder="Meddelande" rows="10"></textarea>
+    </p>
+    <p>
+        <input name="push_button" type="submit" value="Sänd e-brev">
+    </p>
+</form>
 </body>
 </html>
