@@ -20,11 +20,11 @@ final class MailProbe
     public static function fromEnvironment(): self
     {
         return new self(
-            getenv('WPROG2_SMTP_HOST') ?: '127.0.0.1',
-            (int) (getenv('WPROG2_SMTP_PORT') ?: 3025),
-            (int) (getenv('WPROG2_IMAP_PORT') ?: 3143),
-            getenv('WPROG2_MAIL_USER') ?: 'student@test.local',
-            getenv('WPROG2_MAIL_PASSWORD') ?: 'student',
+            getenv('SMTP_HOST') ?: '127.0.0.1',
+            (int) (getenv('SMTP_PORT') ?: 3025),
+            (int) (getenv('IMAP_PORT') ?: 3143),
+            getenv('MAIL_USER') ?: 'student@test.local',
+            getenv('MAIL_PASSWORD') ?: 'student',
         );
     }
 
