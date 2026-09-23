@@ -6,7 +6,8 @@ return [
     'document_root' => 'public',
     'routes' => [
         'main' => '/main.php',
-        'page' => '/naive_sessions.html'
+        'page' => '/naive_sessions.html',
+        'echo' => '/echo.php'
     ],
     'environment' => [],
     'services' => [],
