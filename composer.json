@@ -25,6 +25,7 @@
     "test:provisional": "@php vendor/phpunit/phpunit/phpunit --testdox --group provisional"
   },
   "require": {
-    "ext-fileinfo": "*"
+    "ext-fileinfo": "*",
+    "phpmailer/phpmailer": "^7.1"
   }
 }
