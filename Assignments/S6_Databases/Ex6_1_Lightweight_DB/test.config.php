@@ -6,7 +6,7 @@ return [
     'document_root' => 'public',
     'routes' => [
         'main' => '/main.php',
-        'form' => '/email.html',
+        'form' => '/example.html',
     ],
     'environment' => [],
     'services' => [],
