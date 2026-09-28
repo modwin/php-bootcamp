@@ -5,9 +5,9 @@ namespace WPROG2\S6_Databases\Ex6_1_Lightweight_Database\public;
 class VisitLog
 {
     public function __construct(
-        private string $currentTime,
-        private string $remoteAddress,
-        private string $httpUserAgent
+        private readonly string $currentTime,
+        private readonly string $remoteAddress,
+        private readonly string $httpUserAgent
     ) {}
 
     public function getCurrentTime(): string
