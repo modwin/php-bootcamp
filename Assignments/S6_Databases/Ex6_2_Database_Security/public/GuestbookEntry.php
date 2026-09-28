@@ -17,8 +17,19 @@ class GuestbookEntry
                                 private readonly string $email,
                                 private readonly string $website,
                                 private readonly string $comment,
-                                private readonly string $createdAt)
+                                private readonly string $createdAt,
+                                private readonly ?int $id)
     {
+    }
+
+    public function __toString(): string
+    {
+        return
+            "NAMN: $this->name\n
+            EMAIL: $this->email\n
+            HEMSIDA: $this->website\n
+            KOMMENTAR: $this->comment\n
+            SKAPAT: $this->createdAt";
     }
 
     public function getName(): string
