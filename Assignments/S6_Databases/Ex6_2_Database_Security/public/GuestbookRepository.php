@@ -40,7 +40,7 @@ class GuestbookRepository
                 $row['email'],
                 $row['website'],
                 $row['comment'],
-                $row['createdAt']
+                $row['created_at']
             );
         }
         return $entries;
