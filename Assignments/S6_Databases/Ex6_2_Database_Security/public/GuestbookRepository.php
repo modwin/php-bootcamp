@@ -34,13 +34,14 @@ class GuestbookRepository
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $entries = [];
 
-        foreach ($rows as $row) {
+        foreach ($stmt->fetchAll() as $row) {
             $entries[] = new GuestbookEntry(
                 $row['name'],
                 $row['email'],
                 $row['website'],
                 $row['comment'],
-                $row['created_at']
+                $row['created_at'],
+                (int) $row['id']
             );
         }
         return $entries;
