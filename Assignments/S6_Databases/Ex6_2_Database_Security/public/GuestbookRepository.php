@@ -9,7 +9,7 @@ class GuestbookRepository
         return true;
     }
 
-    public function getEntries(): array
+    public function findAll(): array
     {
         return [];
     }
