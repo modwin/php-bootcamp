@@ -7,11 +7,7 @@ use PDO;
 class GuestbookRepository
 {
 
-    public function __construct(
-        private PDO $pdo
-    )
-    {
-    }
+    public function __construct(private readonly PDO $pdo) {}
 
     public function addEntry(GuestbookEntry $entry): bool
     {
@@ -23,15 +19,17 @@ class GuestbookRepository
         return $stmt->execute([':name' => $entry->getName(),
             ':email' => $entry->getEmail(),
             ':website' => $entry->getWebsite(),
+            ':comment' => $entry->getComment(),
             ':created_at' => $entry->getCreatedAt()]);
     }
 
     public function findAll(): array
     {
         $stmt = $this->pdo->query(
-            'SELECT name, email, website, comment, created_at
-            FROM entries,
-                 ORDER BY created_at DESC');
+            'SELECT id, name, email, website, comment, created_at
+             FROM entries
+             ORDER BY created_at DESC'
+        );
 
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $entries = [];

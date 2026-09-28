@@ -18,9 +18,8 @@ class GuestbookEntry
                                 private readonly string $website,
                                 private readonly string $comment,
                                 private readonly string $createdAt,
-                                private readonly ?int $id)
-    {
-    }
+                                private readonly ?int $id = null
+    ){}
 
     public function __toString(): string
     {
