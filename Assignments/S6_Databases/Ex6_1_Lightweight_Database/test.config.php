@@ -7,6 +7,8 @@ return [
     'routes' => [
         'main' => '/main.php',
         'form' => '/example.html',
+        'repository' => '/VisitLogRepository.php',
+        'VisitLog' => '/VisitLog.php'
     ],
     'environment' => [],
     'services' => [],
