@@ -7,7 +7,7 @@ use PDO;
 class GuestbookRepository
 {
 
-    public function __construct(private readonly PDO $pdo) {}
+    public function __construct(private readonly PDO $pdo){}
 
     public function addEntry(GuestbookEntry $entry): bool
     {
@@ -27,11 +27,11 @@ class GuestbookRepository
     {
         $stmt = $this->pdo->query(
             'SELECT id, name, email, website, comment, created_at
-             FROM entries
-             ORDER BY created_at DESC'
+         FROM entries
+         ORDER BY created_at DESC'
         );
 
-        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
         $entries = [];
 
         foreach ($stmt->fetchAll() as $row) {
@@ -41,7 +41,7 @@ class GuestbookRepository
                 $row['website'],
                 $row['comment'],
                 $row['created_at'],
-                (int) $row['id']
+                (int)$row['id']
             );
         }
         return $entries;
