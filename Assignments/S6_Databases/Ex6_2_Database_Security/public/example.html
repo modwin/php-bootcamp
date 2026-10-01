@@ -1,26 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Uppgift 6.2 i kursen WPROG2 på SU.">
-    <meta name="keywords" content="HTML">
+    <meta name="keywords" content="HTML, PHP, MariaDB, gästbok">
     <meta name="author" content="Björn Moderatho Winther">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uppgift 6.2</title>
+    <style>
+        .guestbook-comment { white-space: pre-wrap; }
+    </style>
 </head>
 <body>
+<!--===errors===-->
+<p role="alert">---error---</p>
+<!--===errors===-->
+
 <form method="post" action="main.php">
     <p>
-        <input type="text" name="name" placeholder="Namn">
+        <input type="text" name="name" placeholder="Namn" value="---form_name---" maxlength="100" required>
     </p>
     <p>
-        <input type="text" name="email" placeholder="Email">
+        <input type="email" name="email" placeholder="Email" value="---form_email---" maxlength="254" required>
     </p>
     <p>
-        <input type="text" name="homepage" placeholder="Hemsida">
+        <input type="url" name="homepage" placeholder="Hemsida" value="---form_website---" maxlength="2048" required>
     </p>
     <p>
-        <textarea name="comment" rows="10" cols="25" placeholder="Kommentar"></textarea>
+        <textarea name="comment" rows="10" cols="25" placeholder="Kommentar" maxlength="5000" required>---form_comment---</textarea>
     </p>
     <p>
         <input type="submit" name="push_button" value="Sänd">
@@ -29,6 +36,15 @@
 
 <hr>
 
+<!--===entries===-->
+<article>
+    <p>NAMN: ---name---</p>
+    <p>EMAIL: <a href="mailto:---email---">---email---</a></p>
+    <p>HEMSIDA: <a href="---website---">---website---</a></p>
+    <p class="guestbook-comment">KOMMENTAR: ---comment---</p>
+    <p>SKAPAT: <time datetime="---created_at_iso---">---created_at---</time></p>
+</article>
+<hr>
 <!--===entries===-->
 </body>
 </html>
