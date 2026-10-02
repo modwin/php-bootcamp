@@ -17,3 +17,11 @@ ALTER TABLE entries
     CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 CREATE INDEX IF NOT EXISTS entries_created_at_id_index ON entries (created_at, id);
+CREATE TABLE IF NOT EXISTS images
+(
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    entry_id BIGINT UNSIGNED NOT NULL,
+    mime_type VARCHAR(100) NOT NULL,
+    image_data MEDIUMBLOB NOT NULL,
+    CONSTRAINT fk_images_entries FOREIGN KEY (entry_id) REFERENCES entries(id) ON DELETE CASCADE
+    ) ENGINE=InnoDB DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
