@@ -1,11 +1,8 @@
 <?php
 
 declare(strict_types=1);
-
 namespace WPROG2\S6_Databases\Ex6_3_Transactional_Database\public;
-
 use PDO;
-use WPROG2\S6_Databases\Ex6_2_Database_Security\public\GuestbookEntry;
 
 final readonly class TransactionalGuestbookRepository
 {
