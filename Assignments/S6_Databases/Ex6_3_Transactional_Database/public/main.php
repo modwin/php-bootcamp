@@ -18,6 +18,7 @@ $formValues = [
     'form_email' => '',
     'form_website' => '',
     'form_comment' => '',
+    'image' => ''
 ];
 $errors = [];
 $template = null;
@@ -29,7 +30,7 @@ try {
     $user = getenv('GUESTBOOK_DB_USER');
     $password = getenv('GUESTBOOK_DB_PASSWORD');
 
-    if ($dsn === false || $dsn === '' || $user === false || $user === '' || $password === false || $password === '') {
+    if ($dsn === false || $dsn === '' || $user === false || $user === '' || $password === false) {
         throw new RuntimeException('The guestbook database environment is incomplete.');
     }
 
@@ -45,12 +46,14 @@ try {
         $email = trim(strip_tags((string) ($_POST['email'] ?? '')));
         $website = trim(strip_tags((string) ($_POST['website'] ?? $_POST['homepage'] ?? '')));
         $comment = trim(strip_tags((string) ($_POST['comment'] ?? '')));
+        $imageData = null;
 
         $formValues = [
             'form_name' => $name,
             'form_email' => $email,
             'form_website' => $website,
             'form_comment' => $comment,
+            'image' => $imageData
         ];
 
         if ($name === '') {
@@ -82,7 +85,6 @@ try {
             $errors[] = 'Kommentaren får innehålla högst 5000 tecken.';
         }
 
-        $imageData = null;
 
         if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
             $tmpPath = $_FILES['image']['tmp_name'];
@@ -112,6 +114,7 @@ try {
                 'form_email' => '',
                 'form_website' => '',
                 'form_comment' => '',
+                'image' => ''
             ];
         } else {
             http_response_code(422);
@@ -158,7 +161,9 @@ try {
         echo $message;
     }
 } catch (Throwable $exception) {
+    echo $exception->getMessage();
     error_log($exception->getMessage());
     http_response_code(500);
-    echo 'Ett oväntat fel uppstod. Försök igen senare.';
+
+    echo "\nEtt oväntat fel uppstod. Försök igen senare.";
 }
