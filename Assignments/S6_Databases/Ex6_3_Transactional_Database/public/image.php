@@ -18,12 +18,13 @@ if ($id === false || $id === null || $id <= 0) {
 $envSetter = new EnvSetter();
 $envSetter->load(__DIR__ . '/../.env', overwrite: true);
 
-$dsn = getenv('GUESTBOOK_DB_DSN');
-$user = getenv('GUESTBOOK_DB_USER');
-$password = getenv('GUESTBOOK_DB_PASSWORD');
+$dsn = getenv('WPROG2_DB_DSN') ?: getenv('GUESTBOOK_DB_DSN');
+$user = getenv('WPROG2_DB_USER') ?: getenv('GUESTBOOK_DB_USER');
+$password = getenv('WPROG2_DB_PASSWORD') ?: getenv('GUESTBOOK_DB_PASSWORD');
 
 if (!$dsn || !$user || !$password) {
     http_response_code(500);
+    echo "DSN = $dsn, USER = $user, PASSWORD = $password";
     echo 'The guestbook database environment is incomplete.';
     exit;
 }

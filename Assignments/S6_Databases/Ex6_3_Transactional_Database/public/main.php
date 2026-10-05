@@ -29,11 +29,13 @@ $envSetter->load(__DIR__ . '/../.env', overwrite: true);
 try {
     $template = new BlockTemplateEngine(__DIR__ . '/example.html');
 
-    $dsn = getenv('GUESTBOOK_DB_DSN');
-    $user = getenv('GUESTBOOK_DB_USER');
-    $password = getenv('GUESTBOOK_DB_PASSWORD');
+    $dsn = getenv('WPROG2_DB_DSN') ?: getenv('GUESTBOOK_DB_DSN');
+    $user = getenv('WPROG2_DB_USER') ?:getenv('GUESTBOOK_DB_USER');
+    $password = getenv('WPROG2_DB_PASSWORD') ?: getenv('GUESTBOOK_DB_PASSWORD');
 
     if ($dsn === false || $dsn === '' || $user === false || $user === '' || $password === false) {
+        echo "DSN = $dsn, USER = $user, PASSWORD = $password";
+
         throw new RuntimeException('The guestbook database environment is incomplete.');
     }
 

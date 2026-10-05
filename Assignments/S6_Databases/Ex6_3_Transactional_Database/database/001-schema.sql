@@ -1,6 +1,3 @@
-GRANT SELECT, INSERT ON guestbook_db.entries TO 'guestbook_user'@'%';
-GRANT SELECT, INSERT ON guestbook_db.images TO 'guestbook_user'@'%';
-sql
 CREATE TABLE IF NOT EXISTS entries
 (
     id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -19,6 +16,3 @@ CREATE TABLE IF NOT EXISTS images
     image_data MEDIUMBLOB NOT NULL,
     CONSTRAINT fk_images_entries FOREIGN KEY (entry_id) REFERENCES entries(id) ON DELETE CASCADE
     ) ENGINE=InnoDB DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-
-GRANT SELECT, INSERT ON entries TO 'guestbook_user'@'%';
-GRANT SELECT, INSERT ON images TO 'guestbook_user'@'%';

@@ -1,7 +1,7 @@
 services:
   mariadb:
     image: mariadb:10.11
-    container_name: wprog2_db
+    container_name: wprog2_db_6.3
     restart: unless-stopped
     environment:
       MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD:?Set MARIADB_ROOT_PASSWORD in .env}
@@ -12,8 +12,8 @@ services:
       - "127.0.0.1:3306:3306"
     volumes:
       - db_data:/var/lib/mysql
-      - ./Assignments/S6_Databases/Ex6_3_Transactional_Database/database/001-schema.sql:/docker-entrypoint-initdb.d/001-schema.sql:ro
-      - ./Assignments/S6_Databases/Ex6_3_Transactional_Database/database/002-runtime-grants.sql:/docker-entrypoint-initdb.d/002-runtime-grants.sql:ro
+      - ./database/001-schema.sql:/docker-entrypoint-initdb.d/001-schema.sql:ro
+      - ./database/002-runtime-grants.sql:/docker-entrypoint-initdb.d/002-runtime-grants.sql:ro
     healthcheck:
       test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
       interval: 5s
