@@ -7,9 +7,13 @@ return [
     'routes' => [
         'main' => '/main.php',
         'page' => '/example.html',
+        'echo' => '/echo.php'
     ],
     'environment' => [],
     'services' => [],
     'features' => [],
-    'settings' => [],
+    'settings' => [
+        'ca_cert' => 'C:/Users/komvu/cacert-2026-09-25.pem',
+        'http_url' => 'http://su.se'
+    ],
 ];
