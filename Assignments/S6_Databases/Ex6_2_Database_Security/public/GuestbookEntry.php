@@ -24,7 +24,7 @@ final readonly class GuestbookEntry
             $this->email,
             $this->website,
             $this->comment,
-            $this->createdAt ?? '',
+            $this->createdAt ?? ''
         );
     }
 
