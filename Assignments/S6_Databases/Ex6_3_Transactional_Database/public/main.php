@@ -23,6 +23,9 @@ $formValues = [
 $errors = [];
 $template = null;
 
+$envSetter = new EnvSetter();
+$envSetter->load(__DIR__ . '/../.env', overwrite: true);
+
 try {
     $template = new BlockTemplateEngine(__DIR__ . '/example.html');
 
