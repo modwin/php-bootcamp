@@ -1,7 +1,7 @@
 <?php
 
 declare(strict_types=1);
-namespace WPROG2\S9_External_Api\Ex9_1_Json_APIs\public;
+namespace WPROG2\S9_External_Api\Ex9_1_Json\public;
 use RuntimeException;
 use JsonException;
 class PolisenApiClient
