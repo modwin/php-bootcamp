@@ -1,7 +1,7 @@
 <?php
 
 namespace WPROG2\Tests\Assignments\S9_External_APIs\Ex9_1_Json_APIs\public;
-use WPROG2\S9_External_APIs\Ex9_API_Supplier\public\PolisenApiClient;
+namespace WPROG2\S9_External_APIs\Ex9_1_Json_APIs\public;
 
 require_once __DIR__ . '/../../../../vendor/autoload.php';
 
