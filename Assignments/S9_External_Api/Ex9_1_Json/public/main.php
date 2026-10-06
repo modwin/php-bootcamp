@@ -2,7 +2,7 @@
 
 namespace WPROG2\Tests\Assignments\S9_External_APIs\Ex9_1_Json_APIs\public;
 
-namespace WPROG2\S9_External_APIs\Ex9_1_Json_APIs\public;
+namespace WPROG2\S9_External_Api\Ex9_1_Json\public;
 
 require_once __DIR__ . '/../../../../vendor/autoload.php';
 
