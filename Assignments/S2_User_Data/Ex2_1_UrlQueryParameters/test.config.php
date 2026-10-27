@@ -5,7 +5,7 @@ declare(strict_types=1);
 return [
     'document_root' => 'public',
     'routes' => [
-        'main' => '/HttpParamPrinter.php',
+        'main' => '/main.php',
         'page' => '/index.html'
     ],
     'environment' => [],
