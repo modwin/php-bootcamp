@@ -7,7 +7,7 @@
 /out/
 
 # Local environment and credentials
-.env
+Assignments/S6_Databases/Ex6_3_Transactional_Database/.env
 .env.*
 !.env.example
 
@@ -38,3 +38,5 @@
 /Assignments/**/*.csr
 /Assignments/**/*.srl
 /Testcase_Definitions_php_wprog2.txt
+/.env
+/Assignments/FinalProject/.env

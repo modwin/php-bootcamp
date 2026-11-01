@@ -7,8 +7,37 @@
     <meta name="author" content="Björn Moderatho Winther">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uppgift 9.1</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 </head>
 <body>
+
+<h1>Polisens Händelser i Sverige</h1>
+
+<div class="filter-box">
+    <form method="get" action="main.php">
+        <div class="form-group">
+            <label for="type">Händelsetyp:</label>
+            <select name="type" id="type">
+                ---type-options---
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="location">Plats / Län:</label>
+            <select name="location" id="location">
+                ---location-options---
+            </select>
+        </div>
+
+        <button type="submit">Filtrera</button>
+        <a href="main.php" class="reset-link">Rensa filter</a>
+    </form>
+</div>
+
+<section id="events">
+    <h2>Aktuella händelser</h2>
+    ---events-list---
+</section>
 
 </body>
 </html>

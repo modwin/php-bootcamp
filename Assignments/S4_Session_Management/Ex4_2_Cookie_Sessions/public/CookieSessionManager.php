@@ -19,7 +19,7 @@ class CookieSessionManager
     {
         $this->cookieName = $cookieName;
         $this->lifespanSeconds = $hours * HOUR_IN_SECONDS;
-        $this->isSecure = $isSecure; // 1. Tilldela värdet till egenskapen
+        $this->isSecure = $isSecure;
     }
 
     public function getOrCreateSessionId(): ?string

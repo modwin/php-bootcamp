@@ -4,7 +4,8 @@
   "type": "project",
   "autoload": {
     "psr-4": {
-      "WPROG2\\": "Assignments/"
+      "WPROG2\\": "Assignments/",
+      "WPROG2\\FinalProject\\": "Assignments/FinalProject/src/"
     }
   },
   "autoload-dev": {
@@ -26,6 +27,8 @@
   },
   "require": {
     "ext-fileinfo": "*",
-    "phpmailer/phpmailer": "^7.1"
+    "phpmailer/phpmailer": "^7.1",
+    "guzzlehttp/psr7": "^2.13",
+    "league/route": "^7.0"
   }
 }

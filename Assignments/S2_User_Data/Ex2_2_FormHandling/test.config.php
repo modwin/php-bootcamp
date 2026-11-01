@@ -5,8 +5,8 @@ declare(strict_types=1);
 return [
     'document_root' => 'public',
     'routes' => [
-        'main' => '/upload.php',
-        'form' => '/index.html'
+        'main' => '/form_handler.php',
+        'form' => '/form.html'
     ],
     'environment' => [],
     'services' => [],
